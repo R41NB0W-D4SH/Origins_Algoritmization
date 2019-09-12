@@ -4,10 +4,9 @@ using namespace std;
 
 int main()
 {
-	setlocale(LC_ALL, "Russian");
 	float a, b, c, min, max;
 
-	cout << "Введите три вещественных числа" << endl;
+	cout << "Enter three nubmers A, B and then C" << endl;
 	cin >> a >> b >> c;
 
 	min = a < b ? a : b;
@@ -15,8 +14,8 @@ int main()
 	max = a > b ? a : b;
 	max = max > c ? max : c;
 
-	cout << "Минимальное значение из трех вещественных чисел = " << min << endl;
-	cout << "Максимальное значение из трех вещественных чисел  = " << max << endl;
+	cout << "Minimal value from numbers = " << min << endl;
+	cout << "Maximum value from numbers  = " << max << endl;
 
 	system("pause");
 	return 0;
