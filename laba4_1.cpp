@@ -1,4 +1,3 @@
-
 #include <iostream>
 
 using namespace std;
@@ -19,20 +18,13 @@ int main()
 		cin >> array[i];
 		if (array[i] & 2 == 1)
 		{
-			amount = amount++;
+			amount = amount + 1;
 			sum = sum + array[i];
 			umn = umn * array[i];
 		}
 	}
 
-	if (amount == 0)
-	{
-		umn = 0;
-	}
-
 	cout << "Сумма равна " << sum << endl << "Произведение равно " << umn << endl << " Количество равно " << amount << endl;
-	
+
 	system("pause");
 	return 0;
-}
-
