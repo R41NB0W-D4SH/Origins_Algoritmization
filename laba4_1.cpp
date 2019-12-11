@@ -1,35 +1,55 @@
 #include <iostream>
 
 using namespace std;
-int main() 
+
+int main()
 {
 	setlocale(0, "");
-	int amount, sum, umn, n, i;
-	cout << "Введите размерность массива" << endl;
+	int i, n, sum, pr, ncount;
+
+	cout << "Введите размерность массива: ";
 	cin >> n;
 
-	amount = 0;
-	sum = 0;
-	umn = 1;
-	int *array = new int[n];
-
-	for (i = 0; i < n; i++) 
+	if (n > 0)
 	{
-		cin >> array[i];
-		if (array[i] % 2 == 1) 
+		cout << endl << "Введите элементы массива." << endl << endl;
+
+		int *a = new int[n];
+
+		for (i = 0; i < n; i++)
 		{
-			amount = amount + 1;
-			sum = sum + array[i];
-			umn = umn * array[i];
+			cout <<"a[" << i << "] : ";
+			cin >> a[i];
+		}
+
+		ncount = 0;
+		sum = 0;
+		pr = 1; 
+
+		for (i = 0; i < n; i++)
+		{
+			if (a[i] % 2 == 1)
+			{
+				ncount++;
+				sum = sum + a[i];
+				pr = pr * a[i];
+			}
+		}
+
+		cout << endl;
+
+		if (ncount < 1)
+		{
+			cout << "Нечетных чисел в массиве нет." << endl;
+		}
+		else
+		{
+			cout << "Сумма нечетных элементов массива: " << sum << endl;
+			cout << endl <<  "Произведение нечетных элементов массива: " << pr << endl;
 		}
 	}
 
-	if (amount == 0)
-	{
-		umn = 0;
-	}
-
-	cout << "Сумма равна " << sum << endl << "Произведение равно " << umn << endl << " Количество равно " << amount << endl;
+	cout << endl;
 
 	system("pause");
 	return 0;
