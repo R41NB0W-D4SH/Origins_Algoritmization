@@ -7,7 +7,7 @@ int main()
 	setlocale(0, "");
 	int i, j, n, min, id_min1 = 0, id_min2 = 0, max, id_max1 = 0, id_max2 = 0;
 
-	cout << "Ввести число N – порядок квадратной матриц: ";
+	cout << "Ввести число N – порядок квадратной матрицы: ";
 	cin >> n;
 
 	if (n > 0)
