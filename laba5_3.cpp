@@ -31,8 +31,8 @@ int main()
 		    sum = 0; pr = 1;
 			for (j = 0; j < m; j++)
 			{
-                sum += a[i][j];
-                pr *= a[i][j];
+              			sum += a[i][j];
+               			pr *= a[i][j];
 			}
 			cout << endl << sum << " " << pr;
 		}
